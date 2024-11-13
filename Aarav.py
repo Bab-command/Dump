@@ -1,22 +1,10 @@
-#####apni 
- #coding=utf-8
-import os, sys, platform
- 
+import os,time,platform
+os.system('clear')
+print('[>] Checking Updates')
 os.system('git pull')
- 
-try:
-    if sys.argv[1]=='update':
-        os.system('git pull')
-except:
-    pass
- 
- 
 bit = platform.architecture()[0]
-if bit == '64bit':
-    
-        import Extractor
-    
+if bit=='64bit':
+ import Extractor
+else:
+ print('\033[1;31m[×] Sorry your Device 32 bit Not Support')
  
-elif bit == '32bit':
-    
-        import Dump1_enc
